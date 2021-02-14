@@ -18,12 +18,16 @@ Quickstart
 ------------
 
 Use `python3 main.py run-all` to run the pipeline. This produces a serialized model file, `models/model.joblib`.
+
 Build a Docker image: 
 `docker build -t ml-template -f Dockerfile .`
+
 To run a container in batch inference mode: 
 `docker run --rm ml-template python3 batch_inference.py`
+
 To run a container in online inference mode: 
 `docker run --rm -it -p 5000:5000 ml-template python3 api.py`
+
 An example of getting predictions in online inference mode is provided in `notebooks/api_test.ipynb`.
 
 Usage
